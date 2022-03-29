@@ -1,0 +1,5 @@
+03/23
+1. create main div/ main component
+2. center it on page (the component)
+3. add plant data -- info for how many plants ordered and the sub pricing
+4. create the scroll bar 
