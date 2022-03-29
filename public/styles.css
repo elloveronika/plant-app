@@ -42,7 +42,7 @@
   font-size: 250%;
 }
 .scroll {
-  width: 100vh;
+  width: 100%;
   background: hsl(174, 86%, 45%);
   /* border: 2px solid blue; */
 }
@@ -129,6 +129,8 @@ button {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  /* border: 2px solid salmon; */
+  width: 100%;
 }
 .trial > ul {
   list-style: none;
