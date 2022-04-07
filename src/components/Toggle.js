@@ -1,7 +1,7 @@
 export default function Toggle(props) {
   return (
     <div className="toggle">
-      <h3>monthly</h3>
+      <h3>Monthly Billing</h3>
       <label className="switch">
         <input
           type="checkbox"
@@ -11,7 +11,7 @@ export default function Toggle(props) {
         />
         <span className="slider round"></span>
       </label>
-      <h3>yearly</h3>
+      <h3>Yearly Billing</h3>
     </div>
   );
 }

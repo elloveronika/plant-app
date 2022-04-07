@@ -1,9 +1,10 @@
 export default function PriceInfo(props) {
-  const totalPrice = 10 * props.plantNum;
+  const totalPrice = props.plantPrice * props.plantNum;
+  // console.log("this is inside priceInfo props price", props.plantPrice);
 
   return (
     <div className="priceinfo">
-      <h2 className="plantprice">Plant Amount:{props.plantNum} </h2>
+      <h2 className="plantprice">Plant Amount: {props.plantNum} </h2>
       <h2>
         <span className="cost">
           $

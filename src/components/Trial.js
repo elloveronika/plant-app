@@ -14,7 +14,7 @@ export default function Trial() {
           <img src={image} /> Monthly growth chart reports
         </li>
       </ul>
-      <button>this is button for trial</button>
+      <button>start my plan-t</button>
     </div>
   );
 }
