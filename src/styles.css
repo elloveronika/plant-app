@@ -164,10 +164,8 @@ button:hover {
   font-size: 14px;
 }
 .plants {
-  /* border: blue solid 1rem; */
   display: flex;
   height: 20vh;
-  /* width: fit-content; */
 }
 .plants > img {
   justify-content: center;
@@ -175,4 +173,7 @@ button:hover {
   object-fit: fill;
   width: 10vw;
   margin: 5px;
+}
+.grayPlant {
+  filter: grayscale(60%);
 }

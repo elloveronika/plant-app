@@ -3,3 +3,7 @@
 2. center it on page (the component)
 3. add plant data -- info for how many plants ordered and the sub pricing
 4. create the scroll bar 
+
+- when plant is selected make it so it goes above the pricing
+- have a default scroll at 2 plants
+

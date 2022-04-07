@@ -30,6 +30,8 @@ function App() {
     <div className="maincard">
       {currentPlant ? (
         <>
+          <h1 className="plantprice">you have chosen: {currentPlant.name}</h1>
+
           <PriceInfo
             subType={isMonthly}
             plantNum={plantNum}
@@ -42,7 +44,10 @@ function App() {
         <h3 className="plantprice">first things first, select your plant!</h3>
       )}
       <Trial />
-      <Plants changeCurrentPlant={handleCurrentPlant} />
+      <Plants
+        currPlant={currentPlant}
+        changeCurrentPlant={handleCurrentPlant}
+      />
     </div>
   );
 }

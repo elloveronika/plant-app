@@ -1,8 +1,8 @@
 import plants from "../images/plants";
 const plantConfig = [
   {
-    name: "aloe",
-    img: plants.aloe,
+    name: "succulent",
+    img: plants.succulent,
     price: 11,
   },
   {
@@ -27,12 +27,33 @@ export default function Plants(props) {
     console.log(plant.price);
     props.changeCurrentPlant(plant);
   }
+  const isSelected = props.currPlant;
+  console.log(isSelected, "this is plant inside plant comp");
+  const isSelectedStyle = {
+    filter: `grayscale(${80}%)`,
+  };
 
   return (
     <div className="plants">
-      {plantConfig.map((plant, i) => (
-        <img key={i} src={plant.img} onClick={() => handlePlantSelect(plant)} />
-      ))}
+      {plantConfig.map((plant, i) => {
+        if (isSelected && isSelected.name == plant.name) {
+          return (
+            <img
+              key={i}
+              src={plant.img}
+              onClick={() => handlePlantSelect(plant)}
+            />
+          );
+        }
+        return (
+          <img
+            key={i}
+            style={isSelectedStyle}
+            src={plant.img}
+            onClick={() => handlePlantSelect(plant)}
+          />
+        );
+      })}
       {/* <h1>each image will appear here</h1> */}
     </div>
   );
