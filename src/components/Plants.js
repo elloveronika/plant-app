@@ -16,8 +16,8 @@ const plantConfig = [
     price: 13,
   },
   {
-    name: "snek",
-    img: plants.snek,
+    name: "snake",
+    img: plants.snake,
     price: 14,
   },
 ];
@@ -28,9 +28,11 @@ export default function Plants(props) {
     props.changeCurrentPlant(plant);
   }
   const isSelected = props.currPlant;
+
   console.log(isSelected, "this is plant inside plant comp");
+  
   const isSelectedStyle = {
-    filter: `grayscale(${80}%)`,
+    filter: `grayscale(${100}%)`,
   };
 
   return (
@@ -45,14 +47,24 @@ export default function Plants(props) {
             />
           );
         }
-        return (
-          <img
-            key={i}
-            style={isSelectedStyle}
-            src={plant.img}
-            onClick={() => handlePlantSelect(plant)}
-          />
-        );
+        if (isSelected) {
+          return (
+            <img
+              key={i}
+              style={isSelectedStyle}
+              src={plant.img}
+              onClick={() => handlePlantSelect(plant)}
+            />
+          );
+        } else {
+          return (
+            <img
+              key={i}
+              src={plant.img}
+              onClick={() => handlePlantSelect(plant)}
+            />
+          );
+        }
       })}
       {/* <h1>each image will appear here</h1> */}
     </div>
