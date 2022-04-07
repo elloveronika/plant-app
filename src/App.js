@@ -38,7 +38,9 @@ function App() {
           <Scroll changePlantNum={handlePlantNumChange} />
           <Toggle func={handleToggle} />
         </>
-      ) : null}
+      ) : (
+        <h3 className="plantprice">first things first, select your plant!</h3>
+      )}
       <Trial />
       <Plants changeCurrentPlant={handleCurrentPlant} />
     </div>
